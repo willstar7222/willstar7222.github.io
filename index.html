@@ -5,6 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('cyber.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 50px 20px;
+        }
+        .qualifications {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .rectangle {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+        }
+        .rectangle:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .contact a {
+            color: lightblue;
+            text-decoration: none;
+        }
+        footer {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .qualifications {
+                flex-direction: column;
+            }
+            .rectangle {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +90,6 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#certs">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -32,25 +108,27 @@
     
     <section id="experience">
         <h2>Experience</h2>
-        <p>I've done some work experience at 
-            <a href="https://cloudcoders.com.au/" target="_blank">Cloud Coders</a>.
-        </p>
+        <p>I've done some work experience at Cloud Coders: <a href="https://cloudcoders.com.au/" target="_blank" rel="noopener noreferrer">https://cloudcoders.com.au/</a></p>
     </section>
     
     <section id="certs">
         <h2>Certifications</h2>
         <div class="qualifications">
-            <a href="https://tafeqld.edu.au/course/19/19102/certificate-ii-in-autonomous-technologies" target="_blank" class="rectangle">Cert II in Autonomous Technology</a>
-            <a href="https://tafeqld.edu.au/course/18/18451/certificate-iv-in-cyber-security" target="_blank" class="rectangle">Cert IV in Cyber Security (Ongoing)</a>
+            <a href="https://tafeqld.edu.au/course/19/19102/certificate-ii-in-autonomous-technologies" target="_blank" rel="noopener noreferrer" class="rectangle">Cert II in Autonomous Technology</a>
+            <a href="https://tafeqld.edu.au/course/18/18451/certificate-iv-in-cyber-security" target="_blank" rel="noopener noreferrer" class="rectangle">Cyber Security (Ongoing)</a>
         </div>
     </section>
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:mail@willemc.me">mail@willemc.me</a></p>
-        <p>Phone: <a href="tel:+1234567890">Will add later</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/willem-cashion-0bb144331/" target="_blank">Willem's LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/willstar7222" target="_blank">GitHub</a></p>
+        <p>Email: <a href="mailto:mail@willemc.me" class="contact">mail@willemc.me</a></p>
+        <p>Phone: <a href="tel:+1234567890" class="contact">Will add later</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/willem-cashion-0bb144331/" target="_blank" rel="noopener noreferrer" class="contact">Willem's LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/willstar7222" target="_blank" rel="noopener noreferrer" class="contact">GitHub</a></p>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Willem Cashion. All rights reserved.</p>
+    </footer>
 </body>
 </html>
