@@ -13,14 +13,14 @@
             color: white;
             text-align: center;
             margin: 0;
-            padding: 0;
+            padding-top: 80px; /* Height of the header */
         }
         header {
-            padding: 20px;
             position: fixed;
-            width: 100%;
             top: 0;
             left: 0;
+            width: 100%;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
             transition: top 0.3s;
             z-index: 1000;
@@ -31,24 +31,24 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
         }
         nav ul li {
-            margin: 10px 15px;
+            margin: 0 15px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
         }
         section {
-            margin: 100px 20px 50px;
+            margin: 50px 20px;
         }
         .qualifications {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
-            flex-wrap: wrap;
         }
         .rectangle {
             background: rgba(0, 0, 0, 0.7);
@@ -60,7 +60,7 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            margin: 10px;
+            text-align: center;
         }
         .contact a {
             color: blue;
@@ -70,8 +70,15 @@
             nav ul {
                 flex-direction: column;
             }
+            nav ul li {
+                margin: 10px 0;
+            }
             .qualifications {
                 flex-direction: column;
+            }
+            .rectangle {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
@@ -114,10 +121,10 @@
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:mail@willemc.me" class="contact">mail@willemc.me</a></p>
-        <p>Phone: <a href="tel:+1234567890" class="contact">Will add later</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/willem-cashion-0bb144331/" target="_blank" class="contact">Willem's LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/willstar7222" target="_blank" class="contact">GitHub</a></p>
+        <p>Email: <a href="mailto:mail@willemc.me">mail@willemc.me</a></p>
+        <p>Phone: <a href="tel:+1234567890">Will add later</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/willem-cashion-0bb144331/" target="_blank">Willem's LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/willstar7222" target="_blank">GitHub</a></p>
     </section>
 
     <script>
@@ -129,7 +136,7 @@
             if (prevScrollpos > currentScrollPos) {
                 header.style.top = "0";
             } else {
-                header.style.top = "-100px";
+                header.style.top = `-${header.offsetHeight}px`;
             }
             prevScrollpos = currentScrollPos;
         }
