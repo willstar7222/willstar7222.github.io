@@ -44,7 +44,12 @@ nav ul li a {
 nav ul li a:hover {
   color: #35ca28;
 }
-
+a {
+  color: #35ca28;
+}
+a:visited {
+  color: #b42bd6;
+}
 section {
   padding: 100px 20px;
 }
@@ -212,7 +217,7 @@ section {
 }
 
 .contact a {
-  color: blue;
+  color: rgb(15, 190, 30);
   text-decoration: none;
 }
 
