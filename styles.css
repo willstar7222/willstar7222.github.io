@@ -54,7 +54,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background: url('cyber.jpg') center/cover no-repeat;
+  background: url('D:/Website/cyber.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
